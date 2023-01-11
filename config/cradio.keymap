@@ -94,7 +94,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_TAB";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp SPACE>, <&kp TAB>;
         };
 	
@@ -144,7 +144,7 @@
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
 		&hm ESC A &kp O &hm LGUI E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
-                      &mt LSHIFT CAPSLOCK    &td_delete                &td_enter &td_tab
+                      &mt LSHIFT CAPSLOCK    &sl EXT                &sl SYM  &td_tab
 		>;
 		};
 
@@ -154,7 +154,7 @@
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 		&kp LT &kp DLLR &kp LPAR &kp LBRC &kp LBKT  &kp EQUAL &kp QMARK &kp SQT &kp MINUS &kp STAR 
 		&kp GT &kp PERCENT &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp DQT &kp PLUS &kp FSLH
-					&to FNC  &to SYM2       &to BASE &kp BSPC
+					&kp BSPC  &sl SYM2       &trans &trans
 		>;
 		};
 
@@ -164,7 +164,7 @@
 		&kp ESC  &trans &trans  &trans  &trans    			        &kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 		&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 		&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-					                        &trans &kp LCTRL    &kp ENTER  &to BASE
+					                        &trans &kp LCTRL    &trans &kp ENTER  
 		>;
 		};
 
