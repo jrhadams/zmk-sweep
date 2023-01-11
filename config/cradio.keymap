@@ -136,7 +136,7 @@
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 		&kp LT &kp DLLR &kp LPAR &kp LBRC &kp LBKT  &kp EQUAL &kp QMARK &kp SQT &kp MINUS &kp STAR 
 		&kp GT &kp PERCENT &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp DQT &kp PLUS &kp FSLH
-					&to FNC  &to SYM2       &BASE &to BSPC
+					&to FNC  &to SYM2       &to BASE &kp BSPC
 		>;
 		};
 
