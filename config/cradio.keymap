@@ -107,12 +107,12 @@
         };
 	
 	
-	td_enter: tap_enter_or_jump {
+	td_cp: tap_copy_and_paste {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_ENTER_OR_JUMP";
+            label = "TAP_COPY_AND_PASTE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to SYM>, <&kp ENTER>;
+            bindings = <&kp LC(C)>, <&kp LC(P)>;
         };
 	
 	
@@ -142,7 +142,7 @@
        		default_layer {
 		bindings = <
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
-		&hm ESC A &kp O &hm LGUI E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
+		&hm ESC A &kp O &kp E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
                       &mt LSHIFT CAPSLOCK    &sl EXT                &sl SYM  &td_tab
 		>;
@@ -161,9 +161,9 @@
         // Main modifiers and arrow keys
 		    ext_layer {
 		bindings = <
-		&kp ESC  &trans &trans  &trans  &trans    			        &kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-		&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-		&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
+		&kp ESC  &td_cp &kp LG(ENTER)  &kp LC(X) &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
+		&sk LALT &sk LSHIFT  &sk LGUI  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
+		&trans  &trans &kp LG(SPACE) &kp TAB   &trans          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
 					                        &trans &kp LCTRL    &trans &kp ENTER  
 		>;
 		};
