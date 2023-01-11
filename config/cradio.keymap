@@ -162,8 +162,8 @@
 		    ext_layer {
 		bindings = <
 		&kp GRAVE  &td_cp &kp LC(X)  &kp LG(ENTER) &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-		&sk LALT &sk LSHIFT  &sk LC(LALT) &sk LGUI  &sk LCTRL            	&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-		&trans  &trans &kp TAB &kp LG(SPACE)  &trans          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
+		&sk TAB &sk LSHIFT  &sk LC(LALT) &sk LALT  &sk LCTRL            	&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
+		&trans  &trans &kp LG &kp LG(SPACE)  &trans          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
 					                        &trans &kp LCTRL    &trans &kp ENTER  
 		>;
 		};
