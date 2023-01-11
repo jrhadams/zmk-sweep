@@ -112,7 +112,7 @@
             label = "TAP_COPY_AND_PASTE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LC(C)>, <&kp LC(P)>;
+            bindings = <&kp LC(C)>, <&kp LC(V)>;
         };
 	
 	
@@ -154,16 +154,16 @@
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 		&kp BACKSLASH &kp DLLR &kp LPAR &kp LBRC &kp LBKT  &kp EQUAL &kp QMARK &kp SQT &kp MINUS &kp STAR 
 		&kp PIPE &kp PERCENT &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp DQT &kp PLUS &kp FSLH
-					&kp BSPC  &sl SYM2       &trans &trans
+					&kp BSPC  &sl SYM2               &trans &kp AMPS
 		>;
 		};
 
         // Main modifiers and arrow keys
 		    ext_layer {
 		bindings = <
-		&kp GRAVE  &td_cp &kp LG(ENTER)  &kp LC(X) &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-		&sk LALT &sk LSHIFT  &sk LGUI  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-		&trans  &trans &kp LG(SPACE) &kp TAB   &trans          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
+		&kp GRAVE  &td_cp &kp LC(X)  &kp LG(ENTER) &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
+		&sk LALT &sk LSHIFT  &sk LC(LALT) &sk LGUI  &sk LCTRL            	&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
+		&trans  &trans &kp TAB &kp LG(SPACE)  &trans          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
 					                        &trans &kp LCTRL    &trans &kp ENTER  
 		>;
 		};
