@@ -123,7 +123,7 @@
         // Base alpha layer
        		default_layer {
 		bindings = <
-		&kp SQT &kp COMMA &DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
+		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
 		&mt ESC A &kp O &hm LGUI E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &td_back
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
                       &td_caps    &to EXT                &to SYM &td_tab
