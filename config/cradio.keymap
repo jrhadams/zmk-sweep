@@ -94,9 +94,27 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_TAB";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp SPACE>, <&kp TAB>;
         };
+	
+	td_delete: tap_delete_or_jump {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DELETE_OR_JUMP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to EXT>, <&kp BSPC>;
+        };
+	
+	
+	td_enter: tap_enter_or_jump {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_ENTER_OR_JUMP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to SYM>, <&kp ENTER>;
+        };
+	
 	
 	td_back: tap_dance_back_space_s {
             compatible = "zmk,behavior-tap-dance";
@@ -126,7 +144,7 @@
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
 		&hm ESC A &kp O &hm LGUI E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
-                      &td_caps    &to EXT                &to SYM &td_tab
+                      &mt LSHIFT CAPSLOCK    &td_delete                &td_enter &td_tab
 		>;
 		};
 
