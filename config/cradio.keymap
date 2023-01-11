@@ -74,6 +74,30 @@
             bindings = <&kp>, <&kp>;
         };
 	
+	td_caps: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MOD_TAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
+        };
+	
+	td_tab: tap_tab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_TAB";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SPACE>, <&kp TAB>;
+        };
+	
+	td_back: tap_dance_back_space_s {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BACK_SPACE_S";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt BSPC S>, <&kp BSPC>;
+        };
+	
 	hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -92,9 +116,9 @@
        		default_layer {
 		bindings = <
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
-		&td A ESC &kp O &hm LGUI E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
-		&kp BSPC &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
-                      &td LSHIFT CAPS    &to EXT                &to SYM &td SPACE  TAB
+		&mt ESC A &kp O &hm LGUI E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &td_back
+		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
+                      &td_caps    &to EXT                &to SYM &td_tab
 		>;
 		};
 
