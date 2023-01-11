@@ -163,7 +163,7 @@
 		bindings = <
 		&kp GRAVE  &td_cp &kp LC(X)  &kp LG(ENTER) &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 		&sk TAB &sk LSHIFT  &sk LC(LALT) &sk LALT  &sk LCTRL            	&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-		&trans  &trans &kp LG &kp LG(SPACE)  &trans          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
+		&trans  &trans &kp LGUI &kp LG(SPACE)  &trans                              &kp LC(BSPC) &kp BSPC &trans &trans  &trans
 					                        &trans &kp LCTRL    &trans &kp ENTER  
 		>;
 		};
