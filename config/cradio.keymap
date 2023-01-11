@@ -123,7 +123,7 @@
         // Base alpha layer
        		default_layer {
 		bindings = <
-		&kp SQT &kp COMMA &td0 &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
+		&kp SQT &kp COMMA &DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
 		&mt ESC A &kp O &hm LGUI E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &td_back
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
                       &td_caps    &to EXT                &to SYM &td_tab
@@ -136,7 +136,7 @@
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 		&kp LT &kp DLLR &kp LPAR &kp LBRC &kp LBKT  &kp EQUAL &kp QMARK &kp SQT &kp MINUS &kp STAR 
 		&kp GT &kp PERCENT &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp DQT &kp PLUS &kp FSLH
-					&to FNC  &to SYM2       &trans &to BASE
+					&to FNC  &to SYM2       &to BASE &kp BSPC
 		>;
 		};
 
