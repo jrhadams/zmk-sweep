@@ -68,7 +68,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
         };
 	
@@ -86,7 +86,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_TAB";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp SPACE>, <&kp TAB>;
         };
 	
@@ -94,7 +94,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BACK_SPACE_S";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&mt BSPC S>, <&kp BSPC>;
         };
 	
@@ -102,7 +102,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
