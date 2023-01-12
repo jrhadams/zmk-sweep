@@ -65,10 +65,12 @@
     
     behaviors {
     	td: tapdance {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;														
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
 	
@@ -85,7 +87,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
         };
 	
 	td_tab: tap_tab {
@@ -94,6 +96,22 @@
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp SPACE>, <&kp TAB>;
+        };
+	
+	td_dollar: tap_dollar {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DOLLAR";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp DOLLAR>, <&kp PERCENT>;
+        };
+	
+	td_minus: tap_minus_under {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_MINUS_UNDER";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
         };
 	
 	td_delete: tap_delete_or_jump {
@@ -150,7 +168,7 @@
        		sym_layer {
 		bindings = <
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-		&kp BACKSLASH &td0 DOLLAR PERCENT &kp LPAR &kp LBRC &kp LBKT  &kp EQUAL &kp QMARK &kp SQT &kp MINUS &kp STAR 
+		&kp BACKSLASH &td_dollar &kp LPAR &kp LBRC &kp LBKT                      &kp EQUAL &kp QMARK &kp SQT &td_minus &kp STAR 
 		&kp PIPE &kp HASH &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp DQT &kp PLUS &kp FSLH
 					&kp BSPC  &sl SYM2               &trans &kp AMPS
 		>;
