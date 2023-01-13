@@ -79,7 +79,7 @@
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&trans>, <&kp CAPSLOCK>;
+            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
 	
 	td0: tap_dance_0 {
