@@ -49,11 +49,11 @@
             key-positions = <32 33>;
             bindings = <&mo ACCENT>;
         };
-				// internal-left & external-right thumb keys
+				// internal-left & -right thumb keys
 				combo_sym2 {
 						timeout-ms = <200>;
-						key-positions = <31 33>;
-						bindings = <&mo SYM2>;
+						key-positions = <31 34>;
+						bindings = <&kp ENTER>;
 				};
 				// both left thumb keys
 				combo_settings {
@@ -158,9 +158,9 @@
        		default_layer {
 		bindings = <
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
-		&hm ESC A &kp O &kp E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
+		&hm ESC A &kp O &hm CAPSLOCK E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
-                      &mt LSHIFT &td_caps    &sl EXT                &sl SYM  &td_tab
+                      &kp LSHIFT    &sl EXT                &sl SYM  &kp SPACE
 		>;
 		};
 
