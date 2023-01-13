@@ -95,7 +95,7 @@
             label = "TAP_TAB";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp SPACE>, <&kp TAB>;
+            bindings = <&kp SPACE>, <&kp ENTER>;
         };
 	
 	td_dollar: tap_dollar {
