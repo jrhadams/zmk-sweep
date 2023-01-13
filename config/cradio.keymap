@@ -78,8 +78,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
+            tapping-term-ms = <250>;
+            bindings = <&mt LSHIFT BSPC>, <&kp CAPSLOCK>;
         };
 	
 	td0: tap_dance_0 {
@@ -160,7 +160,7 @@
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
 		&hm ESC A &kp O &kp E &kp U &kp I         	        &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
-                      &mt LSHIFT CAPSLOCK    &sl EXT                &sl SYM  &td_tab
+                      &td_caps    &sl EXT                &sl SYM  &td_tab
 		>;
 		};
 
@@ -168,8 +168,8 @@
        		sym_layer {
 		bindings = <
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-		&kp BACKSLASH &td_dollar &kp LPAR &kp LBRC &kp LBKT                      &kp EQUAL &kp QMARK &kp SQT &td_minus &kp STAR 
-		&kp PIPE &kp HASH &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp DQT &kp PLUS &kp FSLH
+		&kp BACKSLASH &td_dollar &kp LPAR &kp LBRC &kp LBKT                      &kp CARET &kp QMARK &kp EQUAL &kp MINUS &kp STAR 
+		&kp PIPE &kp HASH &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp UNDER &kp PLUS &kp FSLH
 					&kp BSPC  &sl SYM2               &trans &kp AMPS
 		>;
 		};
@@ -178,7 +178,7 @@
 		    ext_layer {
 		bindings = <
 		&kp GRAVE  &td_cp &kp LC(X)  &kp LG(ENTER) &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-		&sk TAB &sk LSHIFT  &sk LC(LALT) &sk LALT  &sk LCTRL            	&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
+		&kp TAB &sk LSHIFT  &sk LC(LALT) &sk LALT  &sk LCTRL            	&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 		&trans  &trans &kp LGUI &kp LG(SPACE)  &trans                              &kp LC(BSPC) &kp BSPC &trans &trans  &trans
 					                        &trans &kp LCTRL    &trans &kp ENTER  
 		>;
