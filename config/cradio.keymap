@@ -178,8 +178,8 @@
        		sym_layer {
 		bindings = <
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-		&kp BACKSLASH  &kp LBRC &sk LSHIFT &kp LPAR  &kp COMMA             &kp PERIOD  &kp LBKT &sk RSHIFT &kp MINUS &kp SLASH 
-		&kp SEMICOLON &kp RBRC &kp TILDE &kp RPAR  &none               &none &kp RBKT &kp EQUAL &kp PLUS &none
+		&kp BACKSLASH  &kp SLASH &sk LSHIFT &kp LPAR  &kp COMMA             &kp PERIOD  &kp LBKT &sk RSHIFT &kp MINUS &kp QMARK 
+		&kp SEMICOLON &kp PIPE &kp TILDE &kp RPAR  &kp UNDER               &kp LT &kp RBKT &kp EQUAL &kp PLUS &kp GT
 					&kp BSPC  &sl SYM2               &sl FNC &kp AMPS
 		>;
 		};
