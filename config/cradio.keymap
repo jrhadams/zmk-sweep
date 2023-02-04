@@ -39,7 +39,21 @@
 					bindings
 						= <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 				};
-		};
+				assign_left: assign_left {
+					label = "ZM_assign_left";
+            				compatible = "zmk,behavior-macro";
+            				#binding-cells = <0>;
+            				bindings
+                				= <&kp LT &kp MINUS>;
+        			};
+				assign_right: assign_right {
+					label = "ZM_assign_right";
+            				compatible = "zmk,behavior-macro";
+            				#binding-cells = <0>;
+            				bindings
+                				= <&kp MINUS &kp GT>;
+        			};
+	};
 
     combos {
         compatible = "zmk,combos";
@@ -177,10 +191,10 @@
         // Numbers and high frequency symbols
        		sym_layer {
 		bindings = <
+		&kp BACKSLASH  &kp LT &kp DOT &kp LBRC  &kp TILDE             &kp PERIOD  &kp LBKT &kp PLUS &kp MINUS &kp SLASH 
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-		&kp BACKSLASH  &kp SLASH &sk LSHIFT &kp LPAR  &kp COMMA             &kp PERIOD  &kp LBKT &sk RSHIFT &kp MINUS &kp QMARK 
-		&kp SEMICOLON &kp PIPE &kp TILDE &kp RPAR  &kp UNDER               &kp LT &kp RBKT &kp EQUAL &kp PLUS &kp GT
-					&kp BSPC  &sl SYM2               &sl FNC &kp AMPS
+		&kp COLON &kp GT &kp COMMA &kp RBRC  &assign_left               &assign_right &kp RBKT &kp EQUAL &kp UNDER &kp QUESTION
+					&kp BSPC  &kp LSHIFT               &sl FNC &kp AMPS
 		>;
 		};
 
