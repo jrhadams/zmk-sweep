@@ -192,7 +192,7 @@
        		sym_layer {
 		bindings = <
 		&kp BACKSLASH  &kp LBRC &kp DOT &kp LPAR  &kp PIPE             &kp TILDE  &kp LBKT &kp PLUS &kp MINUS &kp SLASH 
-		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+		&kp N1 &kp N2 &mt LSHIFT N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &mt LSHIFT N8 &kp N9 &kp N0
 		&assign_left &kp RBRC &kp COMMA &kp RPAR  &kp COLON               &kp QUESTION  &kp RBKT &kp EQUAL &kp UNDER &assign_right
 					&kp BSPC  &kp LSHIFT               &sl FNC &kp AMPS
 		>;
