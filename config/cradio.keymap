@@ -58,21 +58,21 @@
             				compatible = "zmk,behavior-macro";
             				#binding-cells = <0>;
             				bindings
-                				= <&kp LBRC &kp RBRC>;
+                				= <&kp LBRC &kp RBRC &kp LEFT>;
         			};
 				both_curvy: both_curvy {
 					label = "ZM_both_curvy";
             				compatible = "zmk,behavior-macro";
             				#binding-cells = <0>;
             				bindings
-                				= <&kp LPAR &kp RPAR>;
+                				= <&kp LPAR &kp RPAR &kp LEFT>;
         			};
 				both_bracky: both_bracky {
 					label = "ZM_both_bracky";
             				compatible = "zmk,behavior-macro";
             				#binding-cells = <0>;
             				bindings
-                				= <&kp LBKT &kp RBKT>;
+                				= <&kp LBKT &kp RBKT &kp LEFT>;
         			};
 	};
 
@@ -203,7 +203,7 @@
        		default_layer {
 		bindings = <
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
-		&hm ESC A &kp O &mt LSHIFT E &kp U &kp I         	        &kp D &kp H  &mt LSHIFT T &kp N &kp S
+		&hm ESC A &kp O &hm CAPS E &kp U &kp I         	 &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
                       &kp LSHIFT    &sl EXT                &sl SYM  &kp SPACE
 		>;
@@ -212,10 +212,10 @@
         // Numbers and high frequency symbols
        		sym_layer {
 		bindings = <
-		&kp BACKSLASH  &trans &trans &kp AMPS  &kp PIPE             &kp TILDE  &kp STAR &kp PLUS &kp MINUS &kp SLASH 
+		&kp BACKSLASH  &trans &trans &kp AMPS  &kp PIPE               &kp TILDE  &kp STAR &kp PLUS &kp MINUS &kp SLASH 
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &mt LSHIFT N8 &kp N9 &kp N0
-		&assign_left &kp CARET   &kp UNDER   &kp MINUS   &kp COLON            &kp QUESTION  &both_bracky  &both_curvy  &both_curly &assign_right
-					&kp BSPC  &kp LSHIFT               &sl FNC &kp CARET
+		&assign_left &kp CARET  &kp EQUAL &kp UNDER   &kp COLON            &kp QUESTION  &both_bracky  &both_curvy  &both_curly &assign_right
+					&kp BSPC  &kp LSHIFT               &sl FNC &kp PIPE
 		>;
 		};
 
