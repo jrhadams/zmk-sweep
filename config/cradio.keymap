@@ -215,7 +215,7 @@
 		&kp BACKSLASH  &trans &trans &kp AMPS  &kp PIPE               &kp TILDE  &kp STAR &kp PLUS &kp MINUS &kp SLASH 
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &mt LSHIFT N8 &kp N9 &kp N0
 		&assign_left &kp CARET  &kp EQUAL &kp UNDER   &kp COLON            &kp QUESTION  &both_bracky  &both_curvy  &both_curly &assign_right
-					&kp BSPC  &kp LSHIFT               &sl FNC &kp PIPE
+					&kp BSPC  &kp LSHIFT               &sl FNC &sl SYM2
 		>;
 		};
 
@@ -234,7 +234,7 @@
 		bindings = <
 		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
 		&sk LALT &sk LSHIFT  &sk LGUI &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
-		&none &none &none &none &none				          &none &none &none &none &none 
+		&kp C_PREV &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp C_VOL_UP &kp C_NEXT	&none &none &none &none &none 
           				           &none &sk LALT              &none &to BASE
 		>;
 		};
@@ -243,9 +243,9 @@
        		symbols_2_layer {
 		bindings = <
 		&kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none 
-		&kp IT_BKTK &kp IT_TILDE &kp IT_BSLH &kp IT_PIPE &kp IT_AND         &none &none &none &none &none
-		&none 			&none 			 &kp IT_SECT &kp IT_CCED &kp IT_DEG				  &none &none &none &none &none
-          				           												&none &none        	&none &none 
+		&none &kp LBKT &kp LPAR &kp LBRC  &none				&none &kp RBRC &kp RPAR &kp RBKT &none
+		&none 	&none  &kp IT_SECT &kp IT_CCED &kp IT_DEG		&none &none &none &none &none
+          				           	&none &none        	&none &none 
 		>;
 		};
 
@@ -263,7 +263,7 @@
        		settings_layer {
 		bindings = <
 		&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
-		&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
+		&none &none &none &none      &bt BT_SEL 1 		 &bt BT_SEL 4 &none &none &none &none
 		&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
           				     &none &none                         &none &to BASE
 		>;
