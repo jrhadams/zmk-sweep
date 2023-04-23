@@ -205,7 +205,7 @@
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
 		&hm ESC A &kp O &hm CAPS E &kp U &kp I         	 &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
-                      &kp LSHIFT    &sl EXT                &sl SYM  &kp SPACE
+                      &kp LGUI    &sl EXT                &sl SYM  &kp SPACE
 		>;
 		};
 
@@ -215,7 +215,7 @@
 		&kp BACKSLASH  &trans &trans &kp AMPS  &kp PIPE               &kp TILDE  &kp STAR &kp PLUS &kp MINUS &kp SLASH 
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &mt LSHIFT N8 &kp N9 &kp N0
 		&assign_left &kp CARET  &kp EQUAL &kp UNDER   &kp COLON            &kp QUESTION  &both_bracky  &both_curvy  &both_curly &assign_right
-					&kp BSPC  &kp LSHIFT               &sl FNC &sl SYM2
+					&trans  &sk LG(LSHIFT)               &sl FNC &sl SYM2
 		>;
 		};
 
@@ -224,7 +224,7 @@
 		bindings = <
 		&kp GRAVE  &sk LALT &sk LSHIFT   &sk LCTRL  &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 		&sk LA(LSHIFT) &sk LC(LSHIFT)   &sk LC(LALT) &kp TAB  &kp LC(TAB)        	&kp PG_DN &kp LEFT  &kp BSPC  &kp RIGHT   &kp DEL
-		&trans  &kp LG(ENTER) &kp LGUI &kp LG(SPACE)  &sk LCTRL                      &kp LC(BSPC) &trans &kp DOWN &trans  &trans
+		&trans  &kp LG(ENTER) &sk LGUI &kp LG(SPACE)  &sk LCTRL                      &kp LC(BSPC) &trans &kp DOWN &trans  &trans
 					                        &trans &kp LCTRL    &sk LALT &kp ENTER  
 		>;
 		};
