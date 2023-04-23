@@ -203,7 +203,7 @@
        		default_layer {
 		bindings = <
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
-		&hm ESC A &kp O &hm CAPS E &kp U &kp I         	 &kp D &kp H  &kp T &kp N &kp S
+		&hm ESC A &kp O &hm LSHIFT E &kp U &kp I         	 &kp D &kp H  &kp T &kp N &kp S
 		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
                       &kp LGUI    &sl EXT                &sl SYM  &kp SPACE
 		>;
@@ -225,7 +225,7 @@
 		&kp GRAVE  &sk LALT &sk LSHIFT   &sk LCTRL  &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 		&sk LA(LSHIFT) &sk LC(LSHIFT)   &sk LC(LALT) &kp TAB  &kp LC(TAB)        	&kp PG_DN &kp LEFT  &kp BSPC  &kp RIGHT   &kp DEL
 		&trans  &kp LG(ENTER) &sk LGUI &kp LG(SPACE)  &sk LCTRL                      &kp LC(BSPC) &trans &kp DOWN &trans  &trans
-					                        &trans &kp LCTRL    &sk LALT &kp ENTER  
+					                        &trans &mo SYM2    &sk LALT &kp ENTER  
 		>;
 		};
 
@@ -243,7 +243,7 @@
        		symbols_2_layer {
 		bindings = <
 		&kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none 
-		&none &kp LBKT &kp LPAR &kp LBRC  &none				&none &kp RBRC &kp RPAR &kp RBKT &none
+		&none &kp LBKT &kp LBRC  &kp LPAR  &none			&none &kp RPAR &kp RBRC &kp RBKT &none
 		&none 	&none  &kp IT_SECT &kp IT_CCED &kp IT_DEG		&none &none &none &none &none
           				           	&none &none        	&none &none 
 		>;
