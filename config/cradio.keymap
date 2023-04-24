@@ -81,14 +81,22 @@
             				bindings
                 				= <&kp LBKT &kp RBKT &kp LEFT>;
         			};
-//				sticky_gui: sticky_gui {
-//					label = "ZM_sticky_gui";
-//            				compatible = "zmk,behavior-macro";
-//            				#binding-cells = <0>;
-//            				bindings
-//                				= <&sk LGUI>;
-//				};
+				sticky_gui: sticky_gui {
+					label = "ZM_sticky_gui";
+            				compatible = "zmk,behavior-macro";
+            				#binding-cells = <0>;
+            				bindings
+                				= <&sk LGUI>;
+				};
 				
+				sticky_shifty_gui: sticky_shifty_gui {
+					label = "ZM_sticky_shifty_gui";
+            				compatible = "zmk,behavior-macro";
+            				#binding-cells = <0>;
+            				bindings
+                				= <&sk LG(LSHIFT)>;
+				};
+
 	};
 
     combos {
@@ -215,7 +223,7 @@
 		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        			&kp F &kp G  &kp C &kp R &kp L
 		&hm ESC A &kp O &kp E &kp U &kp I         	 		&kp D &kp H  &kp T &kp N &kp S
 		&sk LCTRL &kp Q &kp J &kp K &kp X          		      &kp B &kp M  &kp W &kp V &kp Z
-                      &sk LSHIFT  &sl EXT                &sl SYM  &lt SYM2 SPACE
+                      &sk LSHIFT  &lt EXT &sticky_gui               &sl SYM  &lt SYM2 SPACE
 		>;
 		};
 
