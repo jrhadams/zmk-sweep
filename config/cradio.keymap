@@ -52,6 +52,7 @@
             				#binding-cells = <0>;
             				bindings
                 				= <&kp MINUS &kp GT>;
+				};
 				rust_match: rust_match {
 					label = "ZM_rust_match";
             				compatible = "zmk,behavior-macro";
