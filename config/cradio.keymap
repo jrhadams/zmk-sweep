@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 // OS definition (before sourcing helper)
-#define HOST_OS 1
+#define HOST_OS 2
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/greek.dtsi"
 #include "../zmk-nodefree-config/international_chars/russian.dtsi"
