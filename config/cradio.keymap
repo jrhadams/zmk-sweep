@@ -56,28 +56,51 @@
             				#binding-cells = <0>;
             				bindings
                 				= <&kp MINUS &kp GT>;
+				};
+				rust_match: rust_match {
+					label = "ZM_rust_match";
+            				compatible = "zmk,behavior-macro";
+            				#binding-cells = <0>;
+            				bindings
+                				= <&kp EQUAL &kp GT>;
         			};
 				both_curly: both_curly {
 					label = "ZM_both_curly";
             				compatible = "zmk,behavior-macro";
             				#binding-cells = <0>;
             				bindings
-                				= <&kp LBRC &kp RBRC>;
+                				= <&kp LBRC &kp RBRC &kp LEFT>;
         			};
 				both_curvy: both_curvy {
 					label = "ZM_both_curvy";
             				compatible = "zmk,behavior-macro";
             				#binding-cells = <0>;
             				bindings
-                				= <&kp LPAR &kp RPAR>;
+                				= <&kp LPAR &kp RPAR &kp LEFT>;
         			};
 				both_bracky: both_bracky {
 					label = "ZM_both_bracky";
             				compatible = "zmk,behavior-macro";
             				#binding-cells = <0>;
             				bindings
-                				= <&kp LBKT &kp RBKT>;
+                				= <&kp LBKT &kp RBKT &kp LEFT>;
         			};
+				sticky_gui: sticky_gui {
+					label = "ZM_sticky_gui";
+            				compatible = "zmk,behavior-macro";
+            				#binding-cells = <0>;
+            				bindings
+                				= <&sk LGUI>;
+				};
+				
+				sticky_shifty_gui: sticky_shifty_gui {
+					label = "ZM_sticky_shifty_gui";
+            				compatible = "zmk,behavior-macro";
+            				#binding-cells = <0>;
+            				bindings
+                				= <&sk LG(LSHIFT)>;
+				};
+
 	};
 
     combos {
@@ -163,13 +186,8 @@
             bindings = <&kp MINUS>, <&kp UNDER>;
         };
 	
-	td_delete: tap_delete_or_jump {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DELETE_OR_JUMP";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&to EXT>, <&kp BSPC>;
-        };
+	
+	
 	
 	
 	td_cp: tap_copy_and_paste {
@@ -206,20 +224,20 @@
         // Base alpha layer
        		default_layer {
 		bindings = <
-		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        &kp F &kp G  &kp C &kp R &kp L 
-		&hm ESC A &kp O &mt LSHIFT E &kp U &kp I         	        &kp D &kp H  &mt LSHIFT T &kp N &kp S
-		&kp SEMI &kp Q &kp J &kp K &kp X                &kp B &kp M  &kp W &kp V &kp Z
-                      &kp LSHIFT    &sl EXT                &sl SYM  &kp SPACE
+		&kp SQT &kp COMMA &kp DOT &kp P &kp Y        			&kp F &kp G  &kp C &kp R &kp L
+		&hm ESC A &kp O &kp E &kp U &kp I         	 		&kp D &kp H  &kp T &kp N &kp S
+		&sk LCTRL &kp Q &kp J &kp K &mt LSHIFT X         	  &kp B &kp M  &kp W &kp V &mt LSHIFT Z
+                      &sl EXT  &sk LGUI                   	               &sl SYM  &lt SYM2 SPACE
 		>;
 		};
 
         // Numbers and high frequency symbols
        		sym_layer {
 		bindings = <
-		&kp BACKSLASH  &trans &trans &kp AMPS  &kp PIPE             &kp TILDE  &kp STAR &kp PLUS &kp MINUS &kp SLASH 
-		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &mt LSHIFT N8 &kp N9 &kp N0
-		&assign_left &kp CARET   &kp UNDER   &kp MINUS   &kp COLON            &kp QUESTION  &both_bracky  &both_curvy  &both_curly &assign_right
-					&kp BSPC  &kp LSHIFT               &sl FNC &kp CARET
+		&kp BACKSLASH  &kp COMMA &kp DOT  &kp AMPS  &kp PIPE               &kp TILDE  &kp STAR &kp PLUS &kp MINUS &kp SLASH 
+		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+		&kp EXCLAMATION &kp AT &kp HASH &kp DOLLAR &kp PERCENT      &kp QUESTION &kp CARET  &kp EQUAL &kp UNDER  &kp COLON            
+				  &sk LG(LSHIFT)  &sk LGUI               &sl FNC &sl SYM2
 		>;
 		};
 
@@ -227,9 +245,9 @@
 		    ext_layer {
 		bindings = <
 		&kp GRAVE  &sk LALT &sk LSHIFT   &sk LCTRL  &kp LC(Z) 			&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-		&sk LA(LSHIFT) &sk LC(LSHIFT)   &sk LC(LALT) &kp TAB  &kp LC(TAB)        	&kp PG_DN &kp LEFT  &kp BSPC  &kp RIGHT   &kp DEL
-		&trans  &kp LG(ENTER) &kp LGUI &kp LG(SPACE)  &sk LCTRL                      &kp LC(BSPC) &trans &kp DOWN &trans  &trans
-					                        &trans &kp LCTRL    &sk LALT &kp ENTER  
+		&sk LA(LSHIFT) &sk LG(LSHIFT) &kp LG(ENTER)  &kp TAB  &kp LC(TAB)        	&kp PG_DN &kp LEFT  &kp BSPC  &kp RIGHT   &kp DEL
+		&trans  &kp LG(ENTER) &sk LGUI &kp LG(SPACE)  &sk LCTRL                      &kp LC(BSPC) &trans &kp DOWN &trans  &trans
+					                        &trans &none    &sk LALT &kp ENTER  
 		>;
 		};
 
@@ -238,7 +256,7 @@
 		bindings = <
 		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
 		&sk LALT &sk LSHIFT  &sk LGUI &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
-		&none &none &none &none &none				          &none &none &none &none &none 
+		&kp C_PREV &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp C_VOL_UP &kp C_NEXT	&none &none &none &none &none 
           				           &none &sk LALT              &none &to BASE
 		>;
 		};
@@ -246,10 +264,10 @@
         // Low frequency symbols.
        		symbols_2_layer {
 		bindings = <
-		&kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none 
-		&kp IT_BKTK &kp IT_TILDE &kp IT_BSLH &kp IT_PIPE &kp IT_AND         &none &none &none &none &none
-		&none 			&none 			 &kp IT_SECT &kp IT_CCED &kp IT_DEG				  &none &none &none &none &none
-          				           												&none &none        	&none &none 
+		&none    &none     &kp LT    &kp SEMI    &none                &none &kp COLON &kp GT &none &none 
+		&none &kp LBKT &kp LBRC  &kp LPAR  &rust_match			&assign_left &kp RPAR &kp RBRC &kp RBKT &assign_right
+		&none 	&none  &none &none        &none          		&none &none &none &none &none
+          				           	&none &none        	&none &none 
 		>;
 		};
 
@@ -267,7 +285,7 @@
        		settings_layer {
 		bindings = <
 		&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
-		&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
+		&none &none &none &none      &bt BT_SEL 1 		 &bt BT_SEL 4 &none &none &none &none
 		&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
           				     &none &none                         &none &to BASE
 		>;
