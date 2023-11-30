@@ -10,9 +10,15 @@
 
 // OS definition (before sourcing helper)
 #define HOST_OS 1
+
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/greek.dtsi"
 #include "../zmk-nodefree-config/international_chars/russian.dtsi"
+
+#undef OS_UNICODE_LEAD
+#undef OS_UNICODE_TRAIL
+#define OS_UNICODE_LEAD &macro_tap &kp LS(LC(U))  // <- Linux compose sequence
+#define OS_UNICODE_TRAIL &macro_tap &kp SPACE  // <- Space terminates unicode input on Linux
 
 // Layer definitions
     #define BASE 0
