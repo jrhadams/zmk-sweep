@@ -10,7 +10,7 @@
 #include "keymap_italian.h"
 
 // OS definition (before sourcing helper)
-#define HOST_OS 2
+#define HOST_OS 1
 #include "../zmk-nodefree-config/helper.h"
 
 // Layer definitions
@@ -19,9 +19,16 @@
     #define EXT 2
     #define FNC 3
     #define SYM2 4
-    #define ACCENT 5
+    #define RU 5
 		#define SETTINGS 6
 // -----------------
+
+// Define your Russian characters
+ZMK_UNICODE_PAIR( ru_a,   N0, N4, N3, N0,   N0, N4, N1, N0 )
+ZMK_UNICODE_PAIR( ru_o,   N0, N4, N3, E,   N0, N4, N1, E )
+ZMK_UNICODE_PAIR( ru_ghe,   N0, N4, N3, N3,   N0, N4, N1, N3 )
+ZMK_UNICODE_PAIR( ru_zhe,   N0, N4, N3, N6,   N0, N4, N1, N6 )
+
 
 &mt {
    //  flavor = "tap-preferred";
@@ -266,18 +273,18 @@
 		bindings = <
 		&none    &none     &kp LT    &kp SEMI    &none                &none &kp COLON &kp GT &none &none 
 		&none &kp LBKT &kp LBRC  &kp LPAR  &rust_match			&assign_left &kp RPAR &kp RBRC &kp RBKT &assign_right
-		&none 	&none  &none &none        &none          		&none &none &none &none &none
+		&none 	&to RU  &to BASE  &none        &none          		&none &none &none &none &none
           				           	&none &none        	&none &none 
 		>;
 		};
 
         // Used to type regional accents.
-       		accent_layer {
+       		ru_layer {
 		bindings = <
-		&none &none &none &kp IT_CEGR &none                         &none &none &none &none &none 
-		&kp IT_AGRV &kp IT_IGRV &kp IT_OGRV &kp IT_EGRV &kp IT_EACU &none &none &none &none &none
+		&none &none &none &kp IT_CEGR &none                         &none &ru_ghe &none &none &none 
+		&kp IT_AGRV &kp IT_IGRV &kp IT_OGRV &ru_a &kp IT_EACU &none &ru_o &none &none &ru_zhe
 		&none &none &none &kp IT_UGRV &none                         &none &none &none &none &none
-          				     &none &none                         &none &none 
+          &sl EXT  &sk LGUI                   	               &sl SYM  &lt SYM2 SPACE
 		>;
 		};
 
