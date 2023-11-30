@@ -1,0 +1,7 @@
+
+// Define your Russian characters
+ZMK_UNICODE_PAIR( ru_a,   N0, N4, N3, N0,   N0, N4, N1, N0 )
+ZMK_UNICODE_PAIR( ru_o,   N0, N4, N3, E,   N0, N4, N1, E )
+ZMK_UNICODE_PAIR( ru_ghe,   N0, N4, N3, N3,   N0, N4, N1, N3 )
+ZMK_UNICODE_PAIR( ru_zhe,   N0, N4, N3, N6,   N0, N4, N1, N6 )
+
