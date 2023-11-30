@@ -116,7 +116,7 @@ ZMK_UNICODE_PAIR( ru_zhe,   N0, N4, N3, N6,   N0, N4, N1, N6 )
         combo_accent {
             timeout-ms = <300>;
             key-positions = <32 33>;
-            bindings = <&mo ACCENT>;
+            bindings = <&mo RU>;
         };
 				// internal-left & -right thumb keys
 				combo_sym2 {
