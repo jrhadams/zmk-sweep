@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keymap_italian.h"
 
+// OS definition (before sourcing helper)
+#define HOST_OS 2
+#include "../zmk-nodefree-config/helper.h"
+
 // Layer definitions
     #define BASE 0
     #define SYM 1
