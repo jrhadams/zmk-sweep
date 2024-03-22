@@ -30,7 +30,7 @@
 		#define SETTINGS 6
 // -----------------
 
-
+&out OUT_BLE
 
 &mt {
    //  flavor = "tap-preferred";
@@ -275,7 +275,7 @@
 		bindings = <
 		&none    &none     &kp LT    &kp SEMI    &none                &none &kp COLON &kp GT &none &none 
 		&none &kp LBKT &kp LBRC  &kp LPAR  &rust_match			&assign_left &kp RPAR &kp RBRC &kp RBKT &assign_right
-		&none 	&tog RU  &to BASE  &none        &none          		&none &none &none &none &none
+		&none 	&to RU  &to BASE  &none        &none          		&none &none &none &none &none
           				           	&none &none        	&none &none 
 		>;
 		};
@@ -285,8 +285,8 @@
 		bindings = <
 		&ru_short_i &ru_tse &ru_u &ru_ka &ru_ie                         &ru_en &ru_ghe &ru_sha &ru_shcha &ru_ze 
 		&ru_ef &ru_yeru &ru_ve &ru_a &ru_pe                      &ru_er &ru_o &ru_el &ru_de &ru_zhe
-		&ru_ya &ru_che &ru_es &ru_em &mt LSHIFT &ru_i                         &ru_te &ru_soft_sign &ru_be &ru_yu &mt RSHIFT &ru_hard_sign
-            &sl EXT  &sk LGUI                   	               &sl SYM  &lt SYM2 SPACE
+		&ru_ya &ru_che &ru_es &ru_em &ru_i                         &ru_te &ru_soft_sign &ru_be &ru_yu &ru_hard_sign
+                      &sl EXT  &sk LGUI                   	               &sl SYM  &lt SYM2 SPACE
 		>;
 		};
 
